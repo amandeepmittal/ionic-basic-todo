@@ -8,6 +8,7 @@ import { ItemDetailPage } from './../pages/item-detail/item-detail';
 import { MyApp } from './app.component';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { StatusBar } from '@ionic-native/status-bar';
+import { SaveDataProvider } from '../providers/save-data/save-data';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { StatusBar } from '@ionic-native/status-bar';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    SaveDataProvider
   ]
 })
 export class AppModule {}
